@@ -1,5 +1,9 @@
-Rails.application.routes.draw do
-  scope Rails.configuration.analytics.route_scope || 'analytics' do
-    post 'pv' => 'analytics/page_views#create'
+# Rails.application.routes.draw do
+#   mount Analytics::Engine => Rails.configuration.analytics[:route_scope]
+# end
+
+Analytics::Engine.routes.draw do
+  scope module: Rails.configuration.analytics.route_scope do
+    resources :page_views, only: [:create]
   end
 end

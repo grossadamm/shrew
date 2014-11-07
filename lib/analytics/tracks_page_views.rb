@@ -9,15 +9,13 @@ module Analytics
       payload[:js_tracking_id] = @_js_tracking_id
     end
 
-    module ClassMethods
-      def tracks_page_views
-        @_tracking_page_views = true
-        @_js_tracking_id = SecureRandom.uuid
-      end
+    included do
+      before_action :tracks_page_views
+    end
+
+    def tracks_page_views
+      @_tracking_page_views = true
+      @_js_tracking_id = SecureRandom.uuid
     end
   end
-end
-
-ActiveSupport.on_load(:action_controller) do
-  include Analytics::TracksPageViews
 end

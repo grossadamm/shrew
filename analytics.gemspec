@@ -1,3 +1,6 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require 'analytics/version'
 
 Gem::Specification.new do |s|
@@ -12,4 +15,6 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_development_dependency 'rspec', '~>3.1.0'
+  s.add_development_dependency 'rspec-rails', '~>3.1.0'
+  s.add_development_dependency 'sqlite3'
 end
