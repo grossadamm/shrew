@@ -5,7 +5,7 @@ module Analytics
     def append_info_to_payload(payload)
       super
       return unless @_tracking_page_views
-      payload[:user_id] = current_user.try(:id)
+      payload[:user_id] = try(:current_user).try(:id)
       payload[:js_tracking_id] = @_js_tracking_id
     end
 
