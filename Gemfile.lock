@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     analytics (0.0.1)
+      activerecord (>= 4.0.0)
+      activesupport (>= 4.0.0)
 
 GEM
   remote: https://rubygems.org/

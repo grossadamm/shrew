@@ -7,6 +7,7 @@ module Analytics
       empty_response && return unless page_view
 
       page_view.js_return_time = params[:jRT]
+      page_view.time_between_sent_and_return = page_view.js_return_time - page_view.sent_time
       page_view.save
 
       empty_response

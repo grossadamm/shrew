@@ -14,6 +14,7 @@ module Analytics
     end
 
     def tracks_page_views
+      logger.info 'set'
       @_tracking_page_views = true
       @_js_tracking_id = SecureRandom.uuid
     end
