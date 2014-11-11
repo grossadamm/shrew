@@ -1,7 +1,7 @@
-module Analytics
+module Shrew
   class PageView < ActiveRecord::Base
-    self.table_name = 'analytics_page_views'
-    belongs_to :user, class_name: Analytics.user_class
+    self.table_name = 'shrew_page_views'
+    belongs_to :user, class_name: Shrew.user_class
 
     def self.create_from_payload(payload)
       attributes = payload.slice(:user_id, :controller, :status, :view_runtime,

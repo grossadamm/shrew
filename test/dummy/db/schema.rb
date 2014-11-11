@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 1) do
 
-  create_table "analytics_page_views", id: false, force: true do |t|
+  create_table "shrew_page_views", force: true do |t|
     t.integer "user_id"
     t.string  "controller"
     t.integer "status"
@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(version: 1) do
     t.float   "db_runtime"
     t.integer "sent_time"
     t.integer "js_return_time"
-    t.binary  "js_tracking_id", limit: 16
+    t.integer "time_between_sent_and_return"
+    t.binary  "js_tracking_id",               limit: 16
   end
 
-  add_index "analytics_page_views", ["user_id"], name: "index_analytics_page_views_on_user_id"
+  add_index "shrew_page_views", ["user_id"], name: "index_shrew_page_views_on_user_id"
 
 end

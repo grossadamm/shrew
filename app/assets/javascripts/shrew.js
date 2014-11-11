@@ -30,7 +30,7 @@
   var trackPageView = function() {
     if(!_validConfig()){
       if(typeof console !== 'undefined' && typeof console.error !== 'undefined'){
-        console.error('invalid analytics configuration')
+        console.error('invalid shrew configuration')
       }
       return false
     }
@@ -61,9 +61,9 @@
       return publicAccess
     })
   } else {
-    window.analytics = publicAccess
+    window.shrew = publicAccess
   }
-})(typeof analyticsConfig !== 'undefined' ? analyticsConfig : {
-  pageViewUrl: '/analytics/page_views',
+})(typeof shrewConfig !== 'undefined' ? shrewConfig : {
+  pageViewUrl: '/shrew/page_views',
   jTI: null
 })

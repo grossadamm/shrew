@@ -1,9 +1,9 @@
 # Rails.application.routes.draw do
-#   mount Analytics::Engine => Rails.configuration.analytics[:route_scope]
+#   mount Shrew::Engine => Rails.configuration.shrew[:route_scope]
 # end
 
-Analytics::Engine.routes.draw do
-  scope module: Analytics.route_scope do
+Shrew::Engine.routes.draw do
+  scope module: Shrew.route_scope do
     resources :page_views, only: [:create], defaults: { format: :json }
   end
 end

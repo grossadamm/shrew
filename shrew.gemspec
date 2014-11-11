@@ -1,17 +1,17 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'analytics/version'
+require 'shrew/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'analytics'
-  s.version     = Analytics::VERSION
+  s.name        = 'shrew'
+  s.version     = Shrew::VERSION
   s.date        = '2014-11-05'
-  s.summary     = 'Analytics'
-  s.description = 'A simple analytics gem'
+  s.summary     = 'Shrew'
+  s.description = 'A simple shrew gem'
   s.authors     = ['Adam Gross']
   s.email       = 'agross@synergydatasystems.com'
-  s.files       = ['lib/analytics.rb']
+  s.files       = ['lib/shrew.rb']
   s.license     = 'MIT'
 
   s.add_dependency 'activesupport', '>=4.0.0'

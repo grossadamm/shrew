@@ -1,6 +1,6 @@
-class AddAnalyticsPageViewTable < ActiveRecord::Migration
+class AddShrewPageViewTable < ActiveRecord::Migration
   def change
-    create_table :analytics_page_views do |t|
+    create_table :shrew_page_views do |t|
       t.integer         :user_id
       t.string          :controller
       t.integer         :status
@@ -12,6 +12,6 @@ class AddAnalyticsPageViewTable < ActiveRecord::Migration
       t.binary          :js_tracking_id, limit: 16
     end
 
-    add_index :analytics_page_views, :user_id
+    add_index :shrew_page_views, :user_id
   end
 end

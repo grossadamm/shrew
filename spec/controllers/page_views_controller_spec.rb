@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe Analytics::PageViewsController, type: :controller do
-  routes { Analytics::Engine.routes }
+RSpec.describe Shrew::PageViewsController, type: :controller do
+  routes { Shrew::Engine.routes }
 
   required_params = { jTI: '1', jRT: '100' }
 
   context 'when missing parameter' do
     required_params.each do |required_param|
       it "#{required_param} does not attempt to find a page view" do
-        expect(Analytics::PageView).not_to receive(:find_by)
+        expect(Shrew::PageView).not_to receive(:find_by)
 
         post :create, required_params.slice(required_param)
       end
@@ -24,7 +24,7 @@ RSpec.describe Analytics::PageViewsController, type: :controller do
 
   context 'when the javascript tracking id matches no existing page view' do
     it 'returns a 200 empty response anyways' do
-      expect(Analytics::PageView).to receive(:find_by).and_return(nil)
+      expect(Shrew::PageView).to receive(:find_by).and_return(nil)
 
       post :create, required_params
 
@@ -34,9 +34,9 @@ RSpec.describe Analytics::PageViewsController, type: :controller do
   end
 
   context 'when successful' do
-    let(:page_view) { Analytics::PageView.new }
+    let(:page_view) { Shrew::PageView.new }
     before(:each) do
-      expect(Analytics::PageView).to receive(:find_by).and_return(page_view)
+      expect(Shrew::PageView).to receive(:find_by).and_return(page_view)
       expect(page_view).to receive(:save).and_return(true)
     end
 

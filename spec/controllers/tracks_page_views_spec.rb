@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 class ApplicationController < ActionController::Base
-  include Analytics::TracksPageViews
+  include Shrew::TracksPageViews
 end
 
 RSpec.describe ApplicationController do
@@ -14,7 +14,7 @@ RSpec.describe ApplicationController do
     end
   end
 
-  describe Analytics::TracksPageViews do
+  describe Shrew::TracksPageViews do
     it 'adds the js tracking id to be used in the layout' do
       get :index
       expect(assigns(:_js_tracking_id)).not_to eq nil
@@ -28,7 +28,7 @@ RSpec.describe ApplicationController do
     it 'creates the initial page view' do
       expect {
         get :index
-      }.to change{Analytics::PageView.count}.by(1)
+      }.to change{Shrew::PageView.count}.by(1)
     end
   end
 end

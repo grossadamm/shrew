@@ -1,0 +1,11 @@
+<script defer async>
+if (typeof define === "function" && define.amd) {
+  require(['shrew'], function(shrew){
+    shrew.setJTI('<%= @_js_tracking_id %>')
+    shrew.automaticallyTrackPageView()
+  })
+} else {
+  shrew.setJTI('<%= @_js_tracking_id %>') 
+  shrew.automaticallyTrackPageView()
+}
+</script>

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    analytics (0.0.1)
+    shrew (0.0.1)
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
 
@@ -106,9 +106,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  analytics!
   database_cleaner
   rails (~> 4.1)
   rspec (~> 3.1.0)
   rspec-rails (~> 3.1.0)
+  shrew!
   sqlite3

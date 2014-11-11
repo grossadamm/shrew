@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Analytics::Engine => "/analytics"
+  mount Shrew::Engine => "/shrew"
 end
