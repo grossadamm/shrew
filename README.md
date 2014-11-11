@@ -1,4 +1,4 @@
-# analytics
+# Shrew
 
 
 Simple analytics engine for rails
