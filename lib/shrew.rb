@@ -11,4 +11,7 @@ module Shrew
 
   mattr_accessor :user_class
   @@user_class = 'User'
+
+  mattr_accessor :exclude
+  @@exclude = []
 end

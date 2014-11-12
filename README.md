@@ -36,3 +36,7 @@ Include the partial at the end of your layout to automatically track javascript 
 </body>
 </html>
 ```
+
+### Configuration
+
+See the initializer for configuration

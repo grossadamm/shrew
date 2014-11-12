@@ -8,7 +8,7 @@ module Shrew
         payload[:duration] = duration
         
         payload[:start_time] = (start.to_f * 1000).to_i
-        next if payload[:controller] == 'Shrew::PageViewsController'
+        next if payload[:controller] == 'Shrew::PageViewsController' || (Shrew.exclude.present? && payload[:controller] =~ Regexp.union(Shrew.exclude))
         Shrew::PageView.create_from_payload(payload)
       end
     end
