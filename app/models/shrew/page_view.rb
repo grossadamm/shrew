@@ -9,7 +9,11 @@ module Shrew
                                  :js_tracking_id, :action, :path, :start_time,
                                  :duration)
                           .merge(sent_time: milliseconds_since_epoch)
-      create(attributes)
+      begin
+        create(attributes)
+      rescue Exception
+        logger.error 'Shrew could not log the page view, please verify the database is ready'
+      end
     end
 
     private

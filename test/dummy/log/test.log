@@ -2326,3 +2326,81 @@ Processing by AnonymousController#index as HTML
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "shrew_page_views"
   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM "shrew_page_views";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'shrew_page_views';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+  Parameters: {"jTI"=>"1", "jRT"=>"100"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+  Parameters: {"jTI"=>"1", "jRT"=>"100"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Shrew::PageViewsController#create as HTML
+  Parameters: {"jTI"=>"1", "jRT"=>"100"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by AnonymousController#index as HTML
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "shrew_page_views" ("action", "controller", "db_runtime", "duration", "js_tracking_id", "path", "sent_time", "start_time", "status", "view_runtime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "index"], ["controller", "AnonymousController"], ["db_runtime", 0.0], ["duration", 0], ["js_tracking_id", "<36 bytes of binary data>"], ["path", "/anonymous"], ["sent_time", 1416588350026], ["start_time", 1416588350026], ["status", 200], ["view_runtime", 0.07200000000000001]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by AnonymousController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "shrew_page_views" ("action", "controller", "db_runtime", "duration", "js_tracking_id", "path", "sent_time", "start_time", "status", "view_runtime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["action", "index"], ["controller", "AnonymousController"], ["db_runtime", 0.0], ["duration", 0], ["js_tracking_id", "<36 bytes of binary data>"], ["path", "/anonymous"], ["sent_time", 1416588350039], ["start_time", 1416588350039], ["status", 200], ["view_runtime", 0.103]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "shrew_page_views"
+Processing by AnonymousController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "shrew_page_views" ("action", "controller", "db_runtime", "duration", "js_tracking_id", "path", "sent_time", "start_time", "status", "view_runtime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["action", "index"], ["controller", "AnonymousController"], ["db_runtime", 0.0], ["duration", 0], ["js_tracking_id", "<36 bytes of binary data>"], ["path", "/anonymous"], ["sent_time", 1416588350056], ["start_time", 1416588350056], ["status", 200], ["view_runtime", 0.087]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "shrew_page_views"
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
