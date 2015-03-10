@@ -12,7 +12,7 @@ class AddShrewPageViewTable < ActiveRecord::Migration
       t.float           :db_runtime
       t.integer         :sent_time, limit: 8
       t.integer         :js_return_time, limit: 8
-      t.string          :js_tracking_id, limit: 16
+      t.column          :js_tracking_id, 'char(16)'
     end
 
     add_index :shrew_page_views, :user_id

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 1) do
     t.float   "db_runtime"
     t.integer "sent_time"
     t.integer "js_return_time"
-    t.binary  "js_tracking_id", limit: 16
+    t.column  "js_tracking_id", "char(16)"
   end
 
   add_index "shrew_page_views", ["js_tracking_id"], name: "index_shrew_page_views_on_js_tracking_id"
