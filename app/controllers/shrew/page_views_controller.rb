@@ -3,7 +3,7 @@ module Shrew
     def create
       empty_response && return unless params[:jTI].present? && params[:jRT].present?
 
-      page_view = Shrew::PageView.find_by js_tracking_id: params[:jTI]
+      page_view = Shrew::PageView.select(:id).find_by js_tracking_id: params[:jTI]
       empty_response && return unless page_view
 
       page_view.js_return_time = params[:jRT]

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 1) do
     t.string  "controller"
     t.string  "action"
     t.string  "path"
+    t.string  "format"
     t.integer "status"
     t.integer "start_time"
     t.integer "duration"

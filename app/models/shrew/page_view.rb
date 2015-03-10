@@ -7,7 +7,7 @@ module Shrew
       attributes = payload.slice(:user_id, :controller, :status, :view_runtime,
                                  :db_runtime, :sent_time, :js_return_time,
                                  :js_tracking_id, :action, :path, :start_time,
-                                 :duration)
+                                 :duration, :format)
                           .merge(sent_time: milliseconds_since_epoch)
       begin
         create(attributes)
